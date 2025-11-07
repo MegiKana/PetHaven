@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Categories</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</head>
+<body>
+  
+  <header class="header">
+    <div class="logo-container">
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+      <img src="./images/hero.png" alt="PetHaven Logo" class="logo-img" />
+       <p class="logo-text">PetHaven</p>
+      </div>
+      
+      <nav id="primary-nav" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pets.html">Pets</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+  <main id="main-content">
+
+
+  <section class="pets-hero">
+    <h1>Every animal has a story - find the one that completes yours ( ˘͈ ᵕ ˘͈♡)</h1>
+  </section>
+  <section class="pet-categories">
+    <a href="#dogs" class="pet-circle">Dogs</a>
+    <a href="#cats" class="pet-circle">Cats</a>
+    <a href="#fish" class="pet-circle">Fish</a>
+    <a href="#birds" class="pet-circle">Birds</a>
+    <a href="#smallpets" class="pet-circle">Small Pets</a>
+  </section>
+
+  <div id="pet-modal" class="modal hidden">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <img id="modal-img" src="" alt="">
+    <h3 id="modal-name"></h3>
+    <p id="modal-age"></p>
+    <p id="modal-diet"></p>
+    <p id="modal-desc"></p>
+    <p id="modal-price" class="modal-price"></p>
+    <a id="modalBtn" href="contact.html" class="modal-btn">Adopt / Contact</a>
+  </div>
+</div>
+
+<section id="dogs" class="dogs-section">
+  <h2 class="section-title">Dogs Section૮ • ﻌ - ა</h2>
+<div class="dog-filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn"        data-filter="puppy">Puppies</button>
+  <button class="filter-btn"        data-filter="adult">Adults</button>
+
+  <label class="available-only">
+    <input type="checkbox" id="availChk"> Available only
+  </label>
+</div>
+
+  <div class="dog-grid">
+    <div class="dog-card" 
+         data-agegroup="puppy"
+         data-name="Labrador Retriever"
+         data-age="3 months · Male"
+         data-diet="Diet: Small‑breed kibble"
+         data-price="Price: €150"
+         data-img="images/labrador.png"
+         data-desc="Friendly, eager‑to‑please family dog. Labs are energic swimmers, famously fond of water retrieves. They require at least an hour of daily exercise to stay fit and calm indoors. Their short double coat sheds year‑round, so weekly brushing is wise. Highly trainable thanks to an eager‑to‑please nature and food motivation.">
+      <img src="images/labrador.png" alt="Labrador retriever puppy">
+      <h4>Labrador Retriever</h4>
+      <p class="meta">3 mo · Male</p>
+      <p class="diet">Diet: Small‑breed kibble</p>
+      <span class="price">€150</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="adult"
+         data-name="German Shepherd"
+         data-age="2 years · Female"
+         data-diet="Diet: High‑protein formula"
+         data-price="Price: €290"
+         data-img="images/german.png"
+         data-desc="Intelligent, loyal, and naturally protective of its family unit. Originally bred for herding and police work, it thrives on mental challenges. Needs structured training and purpose‑driven exercise every day. A dense double coat sheds heavily twice a year; daily brushing reduces tumble‑fur. Socialization from puppyhood prevents over‑guarding tendencies.">
+      <img src="images/german.png" alt="German shepherd adult">
+      <h4>German Shepherd</h4>
+      <p class="meta">2 yr · Female</p>
+      <p class="diet">Diet: High‑protein formula</p>
+      <span class="price">€290</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="puppy"
+         data-name="Golden Retriever"
+         data-age="5 months · Male"
+         data-diet="Diet: Large‑breed puppy food"
+         data-price="Price: €230"
+         data-img="images/golden.png"
+         data-desc="Gentle and trusting, Goldens greet strangers with a wagging tail instead of suspicion. They love fetch games and will carry toys around like prized trophies. Two hours of moderate activity keep their mind and body balanced. Watch for ear cleanliness and joint health as they mature. Perfect for families seeking a patient, affectionate, always‑smiling companion.">
+      <img src="images/golden.png" alt="Golden retriever puppy">
+      <h4>Golden Retriever</h4>
+      <p class="meta">5 mo · Male</p>
+      <p class="diet">Diet: Large‑breed puppy food</p>
+      <span class="price">€230</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="puppy"
+         data-status="adopted"
+         data-name="Beagle"
+         data-age="4 months · Female"
+         data-diet="Diet: Sensitive‑stomach kibble"
+         data-price="Price: €330"
+         data-img="images/beagle.png"
+         data-desc="A merry hound nose‑first on every walk, following scents wherever they lead. Compact size makes it apartment‑friendly if exercise needs are met. They are social pack dogs that dislike being left alone for long hours. Ears should be checked weekly to prevent wax build‑up. Great for owners who enjoy outdoor strolls and don’t mind a bit of playful stubbornness.">
+      <img src="images/beagle.png" alt="Beagle puppy">
+      <h4>Beagle</h4>
+      <p class="meta">4 mo · Female</p>
+      <p class="diet">Diet: Sensitive‑stomach kibble</p>
+      <span class="price">€330</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="adult"
+         data-name="French Bulldog"
+         data-age="1 year · Male"
+         data-diet="Diet: Grain‑free formula"
+         data-price="Price: €190"
+         data-img="images/french.png"
+         data-desc="A clownish lap‑dog that communicates with expressive bat‑ears and snorts. Low exercise needs: two brisk 15‑minute walks are usually enough. Brachycephalic muzzle means they overheat easily; avoid midday heat. Prone to dental crowding, so tooth brushing is essential. Craves constant human company and fits well in small living spaces. Ideal for city dwellers wanting a charismatic but low‑energy companion.">
+      <img src="images/french.png" alt="French bulldog adult">
+      <h4>French Bulldog</h4>
+      <p class="meta">1 yr · Male</p>
+      <p class="diet">Diet: Grain‑free formula</p>
+      <span class="price">€190</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="adult"
+         data-name="Border Collie"
+         data-age="1 year · Female"
+         data-diet="Diet: High‑energy formula"
+         data-price="Price: €180"
+         data-img="images/collie.png"
+         data-desc="Often called the Einstein of dogdom for its problem‑solving brilliance. Originally herding sheep on vast hillsides, it still needs intense daily exercise. Excels in agility, flyball, and any task requiring precision and speed. Without mental work it can invent mischief— puzzle toys are a must. Hip, eye, and CLDNA tests are standard health checks.">
+      <img src="images/collie.png" alt="Border collie adult">
+      <h4>Border Collie</h4>
+      <p class="meta">1 yr · Female</p>
+      <p class="diet">Diet: High‑energy formula</p>
+      <span class="price">€180</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="adult"
+         data-name="Shiba Inu"
+         data-age="2 years · Male"
+         data-diet="Diet: Grain‑free kibble"
+         data-price="Price: €420"
+         data-img="images/shiba.png"
+         data-desc="A fox‑like spitz breed known for its bold, independent spirit. Cleans itself much like a cat and has little doggy odor. Early socialization curbs aloofness and teaches polite interaction. Can master off‑leash recall, but prey drive requires secure fencing. Patella and eye exams help maintain lifelong health. Fits well with people who respect an intelligent, sometimes stubborn roommate.">
+      <img src="images/shiba.png" alt="Shiba inu adult">
+      <h4>Shiba Inu</h4>
+      <p class="meta">2 yr · Male</p>
+      <p class="diet">Diet: Grain‑free kibble</p>
+      <span class="price">€420</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="adult"
+         data-name="Siberian Husky"
+         data-age="3 years · Female"
+         data-diet="Diet: Omega‑rich formula"
+         data-price="Price: €300"
+         data-img="images/husky.png"
+         data-desc="Bred to pull sleds over frozen tundra, it thrives on running and teamwork. Friendly to strangers— rarely a watchdog — but may serenade you with howls. Needs plenty of secure exercise; otherwise escape artistry begins. Requires consistent, positive training to channel energy constructively. Great for active owners who love outdoor adventures in cooler climates.">
+      <img src="images/husky.png" alt="Siberian husky adult">
+      <h4>Siberian Husky</h4>
+      <p class="meta">3 yr · Female</p>
+      <p class="diet">Diet: Omega‑rich formula</p>
+      <span class="price">€300</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="puppy"
+         data-status="adopted"
+         data-name="Dachshund"
+         data-age="4 months · Male"
+         data-diet="Diet: Small‑breed puppy"
+         data-price="Price: €440"
+         data-img="images/dachshund.png"
+         data-desc="A courageous hunter in a compact “sausage‑dog” package. Back structure calls for ramp access to sofas and no high jumping. Short, long‑haired, or wire coats each have unique grooming routines. Daily walks plus indoor play satisfy the need to sniff and explore. Early back exercises and weight control reduce disc problems. Perfect for owners who want a small dog with a big, spirited personality.">
+      <img src="images/dachshund.png" alt="Dachshund puppy">
+      <h4>Dachshund</h4>
+      <p class="meta">4 mo · Male</p>
+      <p class="diet">Diet: Small‑breed puppy</p>
+      <span class="price">€440</span>
+    </div>
+
+    <div class="dog-card"
+         data-agegroup="puppy"
+         data-name="Boxer"
+         data-age="5 months · Female"
+         data-diet="Diet: Large‑breed puppy"
+         data-price="Price: €260"
+         data-img="images/boxer.png"
+         data-desc="Athletic, fun‑loving, and eternally puppy‑like until about three years old. Muscular build benefits from games of fetch and agility drills. Naturally protective yet family‑friendly when socialized early. Brachycephalic tendencies require exercise during cool parts of the day. Ideal for energetic households looking for a bouncy, devoted guardian.">
+      <img src="images/boxer.png" alt="Boxer puppy">
+      <h4>Boxer</h4>
+      <p class="meta">5 mo · Female</p>
+      <p class="diet">Diet: Large‑breed puppy</p>
+      <span class="price">260</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section id="cats" class="cats-section">
+  <h2 class="section-title">Cats Sectionฅ≽^•⩊•^≼ฅ</h2>
+<div class="cat-filters">
+  <button class="cfilter-btn cactive" data-filter="all">All</button>
+  <button class="cfilter-btn"         data-filter="puppy">Kittens</button>
+  <button class="cfilter-btn"         data-filter="adult">Adults</button>
+
+  <label class="available-only">
+    <input type="checkbox" id="catAvailChk"> Available only
+  </label>
+</div>
+
+
+  <div class="cat-grid">
+
+    <div class="cat-card"
+         data-agegroup="puppy"
+         data-name="Siamese"
+         data-age="4 months · Female"
+         data-diet="Diet: Kitten formula"
+         data-price="Price: €90"
+         data-img="images/siamese.png"
+         data-desc="Talkative and people‑oriented with striking blue eyes. Enjoys interactive play and will follow you around the house. Requires mental stimulation to avoid boredom mischief. Short coat is low maintenance but sensitive skin needs gentle shampoo. Temperature‑loving: seeks warm spots for naps. Dental hygiene is vital due to crowded teeth.">
+      <img src="images/siamese.png" alt="Siamese kitten">
+      <h4>Siamese</h4>
+      <p class="meta">4 mo · Female</p>
+      <p class="diet">Diet: Kitten formula</p>
+      <span class="price">€90</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="adult"
+         data-name="Persian"
+         data-age="2 years · Male"
+         data-diet="Diet: Long‑hair care"
+         data-price="Price: €120"
+         data-img="images/persian.png"
+         data-desc="Laid‑back lap cat famous for its luxurious coat and sweet nature. Daily combing prevents mats and keeps fur flowing. Prefers calm households and soft resting spots. Low jumper; set up short ramps to favourite chairs. Watch calorie intake to prevent weight gain. Perfect for owners who enjoy quiet cuddles and grooming time.">
+      <img src="images/persian.png" alt="Persian adult">
+      <h4>Persian</h4>
+      <p class="meta">2 yr · Male</p>
+      <p class="diet">Diet: Long‑hair care</p>
+      <span class="price">€120</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="puppy"
+         data-name="Maine Coon"
+         data-age="5 months · Male"
+         data-diet="Diet: Large‑breed kitten"
+         data-price="Price: €140"
+         data-img="images/maine.png"
+         data-desc="Gentle giant renowned for friendliness and dog‑like loyalty. Loves climbing tall cat trees and playing fetch. Chirps and trills instead of meowing loudly. Hip and cardiac screenings recommended in adulthood. Ideal for families wanting a large, sociable, adaptable cat.">
+      <img src="images/maine.png" alt="Maine coon kitten">
+      <h4>Maine Coon</h4>
+      <p class="meta">5 mo · Male</p>
+      <p class="diet">Diet: Large‑breed kitten</p>
+      <span class="price">€140</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="adult"
+         data-status="adopted"
+         data-name="British Shorthair"
+         data-age="3 years · Female"
+         data-diet="Diet: Indoor formula"
+         data-price="Price: €310"
+         data-img="images/british.png"
+         data-desc="Plush teddy‑bear cat with a calm, undemanding personality. Enjoys gentle play sessions followed by long naps. Tends toward weight gain; use puzzle feeders to keep fit. Typically quiet with a soft chirp rather than loud meows. Annual dental checks keep that famous smile healthy. Suits owners who prefer an easygoing, affectionate companion.">
+      <img src="images/british.png" alt="British shorthair adult">
+      <h4>British Shorthair</h4>
+      <p class="meta">3 yr · Female</p>
+      <p class="diet">Diet: Indoor formula</p>
+      <span class="price">€310</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="puppy"
+         data-name="Bengal"
+         data-age="6 months · Male"
+         data-diet="Diet: High‑protein"
+         data-price="Price: €250"
+         data-img="images/bengal.png"
+         data-desc="Wild‑looking coat with glittering rosettes and boundless energy. Needs tall scratching posts and daily interactive play. Short pelted fur is easy care with occasional brushing. Highly intelligent; clicker training and leash walks keep mind engaged. Regular heart screenings advised for HCM. Perfect for adventurous owners seeking an athletic, inquisitive cat.">
+      <img src="images/bengal.png" alt="Bengal kitten">
+      <h4>Bengal</h4>
+      <p class="meta">6 mo · Male</p>
+      <p class="diet">Diet: High‑protein</p>
+      <span class="price">€250</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="adult"
+         data-name="Ragdoll"
+         data-age="1 year · Female"
+         data-diet="Diet: Sensitive tummy"
+         data-price="Price: €130"
+         data-img="images/ragdoll.png"
+         data-desc="Named for relaxing limp in your arms like a rag doll. Seeks human company and greets you at the door. Semi‑long silky coat resists matting; twice‑weekly brushing suffices. Needs sturdy scratching posts due to large size. Perfect for families wanting a gentle, floppy lap cat.">
+      <img src="images/ragdoll.png" alt="Ragdoll adult">
+      <h4>Ragdoll</h4>
+      <p class="meta">1 yr · Female</p>
+      <p class="diet">Diet: Sensitive tummy</p>
+      <span class="price">€130</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="puppy"
+         data-status="adopted"
+         data-name="Sphynx"
+         data-age="5 months · Female"
+         data-diet="Diet: High‑calorie"
+         data-price="Price: €160"
+         data-img="images/sphynx.png"
+         data-desc="Hairless but not low‑maintenance: skin needs weekly baths. Enjoys warm sweaters and heating pads to stay cozy. Extremely social, often perching on shoulders. Requires high‑calorie diet to regulate body heat. Large ears gather debris; clean gently each week. Regular heart screening for HCM recommended.">
+      <img src="images/sphynx.png" alt="Sphynx kitten">
+      <h4>Sphynx</h4>
+      <p class="meta">5 mo · Female</p>
+      <p class="diet">Diet: High‑calorie</p>
+      <span class="price">€160</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="adult"
+         data-name="Scottish Fold"
+         data-age="2 years · Male"
+         data-diet="Diet: Joint support"
+         data-price="Price: €225"
+         data-img="images/scottish.png"
+         data-desc="Distinctive folded ears and owl‑like eyes give unique charm. Playful yet calm, loves plush toys and sunny windowsills. Prone to cartilage and joint issues; joint‑support diet helps. Weekly brushing keeps short coat glossy. Monitor weight to ease pressure on joints. Suits owners who appreciate a sweet, docile companion.">
+      <img src="images/scottish.png" alt="Scottish fold adult">
+      <h4>Scottish Fold</h4>
+      <p class="meta">2 yr · Male</p>
+      <p class="diet">Diet: Joint support</p>
+      <span class="price">€225</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="adult"
+         data-name="Abyssinian"
+         data-age="1 year · Female"
+         data-diet="Diet: Active‑cat mix"
+         data-price="Price: €125"
+         data-img="images/abyssian.png"
+         data-desc="Sleek, ticked coat with athletic build and endless curiosity. Climbs high vantage points and surveys the room. Short coat sheds minimally; rubber brush weekly suffices. Social and outgoing with guests. Periodic dental checkups keep teeth healthy. Great for owners who enjoy an active, interactive cat.">
+      <img src="images/abyssian.png" alt="Abyssinian adult">
+      <h4>Abyssinian</h4>
+      <p class="meta">1 yr · Female</p>
+      <p class="diet">Diet: Active‑cat mix</p>
+      <span class="price">€125</span>
+    </div>
+
+    <div class="cat-card"
+         data-agegroup="puppy"
+         data-name="American Shorthair"
+         data-age="4 months · Male"
+         data-diet="Diet: Kitten formula"
+         data-price="Price: €300"
+         data-img="images/american.png"
+         data-desc="Classic working cat of early American farms, sturdy and adaptable. Coat is low‑maintenance with seasonal shedding. Enjoys interactive play but content to relax near you. Tends toward healthy longevity with proper diet. Watch calorie intake to prevent obesity. Perfect starter cat for first‑time owners.">
+      <img src="images/american.png" alt="American shorthair kitten">
+      <h4>American Shorthair</h4>
+      <p class="meta">4 mo · Male</p>
+      <p class="diet">Diet: Kitten formula</p>
+      <span class="price">€300</span>
+    </div>
+
+  </div>
+</section>
+
+<section id="fish" class="fish-section">
+  <h2 class="section-title">Fish Section𓇼 ⋆.˚ 𓆉 𓆝 𓆡⋆.˚ 𓇼</h2>
+<div class="simple-filter">
+  <button class="sfilter-btn active">All</button>
+
+  <label class="available-only">
+    <input type="checkbox" class="availChk">
+    Available only
+  </label>
+</div>
+
+
+  <div class="fish-grid">
+
+    <div class="fish-card"
+         data-status="bought"
+         data-name="Betta"
+         data-age="Size: 6 cm · Solo"
+         data-diet="Diet: High‑protein flakes"
+         data-price="Price: €25"
+         data-img="images/beta.png"
+         data-desc="Known as Siamese fighting fish, bettas display vibrant flowing fins. Males should be housed alone to prevent aggression. Provide gentle filtration and floating plants for resting. Water temp 26‑28 °C keeps colours vivid. Frequent small feedings mimic natural habits. Weekly partial water changes maintain health. Great for beginners seeking a hardy, interactive fish.">
+      <img src="images/beta.png" alt="Betta splendens">
+      <h4>Betta</h4>
+      <p class="meta">Size: 6 cm · Solo</p>
+      <p class="diet">Diet: High‑protein flakes</p>
+      <span class="price">€25</span>
+    </div>
+
+    <div class="fish-card"
+         data-name="Goldfish"
+         data-age="Size: 12 cm · Pair"
+         data-diet="Diet: Veggie pellets"
+         data-price="Price: €22"
+         data-img="images/goldfish.png"
+         data-desc="Classic pond favourite that can grow large given space. Produces more waste than tropical fish; needs powerful filtration. Enjoys digging, so use smooth gravel. Cooler water (18‑22 °C) keeps metabolism balanced. Feed veggie‑rich diet to avoid swim bladder issues. Handle gently with wet hands if needed. Perfect for outdoor barrel ponds or spacious aquariums.">
+      <img src="images/goldfish.png" alt="Common goldfish">
+      <h4>Goldfish</h4>
+      <p class="meta">Size: 12 cm · Pair</p>
+      <p class="diet">Diet: Veggie pellets</p>
+      <span class="price">€22</span>
+    </div>
+
+    <div class="fish-card"
+         data-name="Guppy"
+         data-age="Size: 4 cm · Trio"
+         data-diet="Diet: Tropical flakes"
+         data-price="Price: €15"
+         data-img="images/guppy.png"
+         data-desc="Live‑bearing fish famous for colourful fan tails. Peaceful and active, ideal for community tanks. Small groups encourage natural schooling behaviour. Moderate hardness and pH 7.0‑7.5 keep them thriving. Provide fine‑leaf plants for fry to hide. Feed varied flakes and baby brine shrimp. Excellent choice for first‑time aquarists.">
+      <img src="images/guppy.png" alt="Guppy trio">
+      <h4>Guppy</h4>
+      <p class="meta">Size: 4 cm · Trio</p>
+      <p class="diet">Diet: Tropical flakes</p>
+      <span class="price">€15</span>
+    </div>
+
+    <div class="fish-card"
+        data-status="bought"
+         data-name="Angelfish"
+         data-age="Size: 15 cm · Pair"
+         data-diet="Diet: Frozen bloodworms"
+         data-price="Price: €20"
+         data-img="images/angelfish.png"
+         data-desc="Graceful cichlid with tall fins that glide through water. Prefers calm community mates that won’t nip fins. Vertical driftwood and plants mimic Amazon habitat. Soft, slightly acidic water enhances health. Breeds in pairs, laying eggs on broad leaves. Feed varied diet including frozen foods. Great centrepiece for a peaceful tropical aquarium.">
+      <img src="images/angelfish.png" alt="Freshwater angelfish">
+      <h4>Angelfish</h4>
+      <p class="meta">Size: 15 cm · Pair</p>
+      <p class="diet">Diet: Frozen bloodworms</p>
+      <span class="price">€20</span>
+    </div>
+
+    <div class="fish-card"
+         data-name="Neon Tetra"
+         data-age="Size: 3 cm · School (6)"
+         data-diet="Diet: Micro‑granules"
+         data-price="Price: €18"
+         data-img="images/neon.png"
+         data-desc="Bright blue and red stripes create stunning schooling displays. Needs a group of at least six to feel secure. Prefers dim lighting and dark substrate to enhance colours. Soft, slightly acidic water (pH 6.5) mimics Amazon streams. Tiny mouths need crushed foods. Sensitive to sudden temp changes; acclimate slowly. Ideal nano fish for planted tanks.">
+      <img src="images/neon.png" alt="Neon tetra school">
+      <h4>Neon Tetra</h4>
+      <p class="meta">Size: 3 cm · School (6)</p>
+      <p class="diet">Diet: Micro‑granules</p>
+      <span class="price">€18</span>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="birds" class="birds-section">
+  <h2 class="section-title">Birds Section𓅰 𓅬 𓅭 𓅮 𓅯</h2>
+<div class="simple-filter">
+  <button class="sfilter-btn active">All</button>
+
+  <label class="available-only">
+    <input type="checkbox" class="availChk">
+    Available only
+  </label>
+</div>
+
+
+  <div class="birds-grid">
+
+    <div class="bird-card"
+         data-name="Budgerigar (Parakeet)"
+         data-age="5 months · Pair"
+         data-diet="Diet: Seed mix & greens"
+         data-price="Price: €95"
+         data-img="images/bird1.png"
+         data-desc="Small, social and easy to tame with daily gentle handling. Needs at least one companion budgie for mental health. Provide varied perches to keep feet strong. Enjoys shredding toys and millet sprays. Cage should be wide, not tall, for flight space. Weekly nail trims and beak checks prevent overgrowth. Perfect starter bird for families and apartments.">
+      <img src="images/bird1.png" alt="Budgerigar">
+      <h4>Budgerigar</h4>
+      <p class="meta">5 mo · Pair</p>
+      <p class="diet">Diet: Seed mix & greens</p>
+      <span class="price">€95</span>
+    </div>
+
+    <div class="bird-card"
+         data-name="Cockatiel"
+         data-age="8 months · Male"
+         data-diet="Diet: Pellets & veggies"
+         data-price="Price: €105"
+         data-img="images/bird2.png"
+         data-desc="Whistles cheerful tunes and loves head scratches. Needs out‑of‑cage flight time daily. Offer cuttlebone to supply calcium and trim beak. Dust bath or light misting keeps feathers clean. Crest shows mood—learn to read it. Prone to vitamin‑A deficiency; dark greens help. Great companion for owners wanting a friendly, low‑noise parrot.">
+      <img src="images/bird2.png" alt="Cockatiel">
+      <h4>Cockatiel</h4>
+      <p class="meta">8 mo · Male</p>
+      <p class="diet">Diet: Pellets & veggies</p>
+      <span class="price">€105</span>
+    </div>
+
+    <div class="bird-card"
+         data-name="Lovebird"
+         data-age="6 months · Pair"
+         data-diet="Diet: Pellets & fruit"
+         data-price="Price: €170"
+         data-img="images/bird333.png"
+         data-desc="Colourful, energetic parrot that bonds closely with its mate. Provide chewable toys to satisfy nesting instincts. Daily supervised playtime prevents boredom. Diet rich in pellets and fresh fruit maintains vibrant plumage. Needs roomy cage with horizontal bars for climbing. Regular wing clips only if free‑flight space is unsafe. Ideal for owners who enjoy playful, interactive birds.">
+      <img src="images/bird333.png" alt="Lovebird pair">
+      <h4>Lovebird</h4>
+      <p class="meta">6 mo · Pair</p>
+      <p class="diet">Diet: Pellets & fruit</p>
+      <span class="price">€170</span>
+    </div>
+
+    <div class="bird-card"
+         data-status="bought"
+         data-name="African Grey Parrot"
+         data-age="2 years · Female"
+         data-diet="Diet: High‑nutrient pellets"
+         data-price="Price: €550"
+         data-img="images/bird44.png"
+         data-desc="Highly intelligent and renowned for speech mimicry. Requires daily mental challenges—puzzle feeders, training sessions. Large cage with foraging toys prevents feather‑plucking. Needs calcium‑rich diet and UVB exposure for bone health. Dusty feathers—use air purifier if allergies present. Lifespan exceeds 40 years; commitment is long term. Perfect for experienced parrot enthusiasts ready for lifelong friend.">
+      <img src="images/bird44.png" alt="African grey parrot">
+      <h4>African Grey</h4>
+      <p class="meta">2 yr · Female</p>
+      <p class="diet">Diet: High‑nutrient pellets</p>
+      <span class="price">€550</span>
+    </div>
+
+    <div class="bird-card"
+         data-name="Canary"
+         data-age="1 year · Male"
+         data-diet="Diet: Canary seed & eggfood"
+         data-price="Price: €200"
+         data-img="images/bird5.png"
+         data-desc="Melodious singer that brightens any room with song. Prefer solo living — males sing best alone. Needs daily access to bath dish for feather care. Provide varied perches to avoid foot sores. Cage should be placed in quiet draft‑free area. Sensitive to fumes; keep kitchen smells away. Great for listeners wanting a low‑handling avian companion.">
+      <img src="images/bird5.png" alt="Canary">
+      <h4>Canary</h4>
+      <p class="meta">1 yr · Male</p>
+      <p class="diet">Diet: Seed & eggfood</p>
+      <span class="price">€200</span>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="smallpets" class="smallpets-section">
+  <h2 class="section-title">Small Pets Section₍ᐢ._.ᐢ₎♡ ༘</h2>
+<div class="simple-filter">
+  <button class="sfilter-btn active">All</button>
+
+  <label class="available-only">
+    <input type="checkbox" class="availChk">
+    Available only
+  </label>
+</div>
+
+
+  <div class="smallpets-grid">
+
+    <div class="smallpet-card"
+         data-name="Netherland Dwarf Rabbit"
+         data-age="4 months · Male"
+         data-diet="Diet: Timothy hay & veggies"
+         data-price="Price: €60"
+         data-img="images/rabbit.png"
+         data-desc="Compact rabbit weighing under 1 kg when grown. Needs spacious enclosure and daily free‑roam time. Constant supply of hay keeps teeth trimmed and gut healthy. Loves leafy greens like romaine and parsley. Handle gently—bones are delicate. Annual check‑ups monitor teeth alignment. Perfect for gentle owners who enjoy quiet, cuddly pets.">
+      <img src="images/rabbit.png" alt="Netherland dwarf rabbit">
+      <h4>Rabbit</h4>
+      <p class="meta">4 mo · Male</p>
+      <p class="diet">Diet: Hay & veggies</p>
+      <span class="price">€60</span>
+    </div>
+
+    <div class="smallpet-card"
+         data-name="American Guinea Pig"
+         data-age="6 months · Female"
+         data-diet="Diet: Vitamin‑C veggies"
+         data-price="Price: €35"
+         data-img="images/guinea.png"
+         data-desc="Social herbivore that chirps when excited. Requires companion of same species—never keep alone. Daily vitamin‑C rich veggies prevent scurvy. Large flat cage with hideouts keeps them confident. Nails grow fast; trim monthly. Alert for respiratory sounds in cool drafts. Ideal family pet for gentle children.">
+      <img src="images/guinea.png" alt="Guinea pig">
+      <h4>Guinea Pig</h4>
+      <p class="meta">6 mo · Female</p>
+      <p class="diet">Diet: Vitamin‑C veggies</p>
+      <span class="price">€35</span>
+    </div>
+
+    <div class="smallpet-card"
+         data-name="Syrian Hamster"
+         data-age="3 months · Male"
+         data-diet="Diet: Seed mix & insects"
+         data-price="Price: €20"
+         data-img="images/hamster.png"
+         data-desc="Nocturnal pet that enjoys burrowing in 20 cm deep bedding. Must live solo to prevent fighting. Silent spinner wheel offers nightly exercise. Provide chew toys to wear down ever‑growing teeth. Spot clean cage twice weekly; full change monthly. Short lifespan of 2‑3 years; regular vet checks extend comfort. Great for night‑owl owners seeking low‑maintenance friend.">
+      <img src="images/hamster.png" alt="Syrian hamster">
+      <h4>Hamster</h4>
+      <p class="meta">3 mo · Male</p>
+      <p class="diet">Diet: Seed mix & insects</p>
+      <span class="price">€20</span>
+    </div>
+
+    <div class="smallpet-card"
+         data-name="Chinchilla"
+         data-age="1 year · Female"
+         data-diet="Diet: Hay & chinchilla pellets"
+         data-price="Price: €90"
+         data-img="images/chinchilla.png"
+         data-desc="Softest fur in the animal kingdom—never bathe in water. Provide dust bath 3× a week to keep coat clean. Highly active; needs multi‑level cage for jumping. Sensitive to heat—keep room below 24 °C. Chew blocks protect teeth from overgrowth. Veteran exotic vets should check annually. Fits owners who can offer cool, quiet environment.">
+      <img src="images/chinchilla.png" alt="Chinchilla">
+      <h4>Chinchilla</h4>
+      <p class="meta">1 yr · Female</p>
+      <p class="diet">Diet: Hay & pellets</p>
+      <span class="price">€90</span>
+    </div>
+
+    <div class="smallpet-card"
+         data-name="Ferret"
+         data-age="8 months · Male"
+         data-diet="Diet: High‑protein kibble"
+         data-price="Price: €85"
+         data-img="images/ferret.png"
+         data-desc="Playful, curious, and almost cat‑like in flexibility. Needs 3–4 hours supervised free‑roam daily. Carnivorous diet high in animal protein keeps coat glossy. Vaccinate for rabies and distemper annually. Provide tunnels and hammocks for enrichment. Prone to adrenal disease—annual vet checks are key. Great for experienced owners seeking interactive pocket predator.">
+      <img src="images/ferret.png" alt="Ferret">
+      <h4>Ferret</h4>
+      <p class="meta">8 mo · Male</p>
+      <p class="diet">Diet: High‑protein kibble</p>
+      <span class="price">€85</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<button id="backTop" aria-label="Back to Top">↑</button>
+
+  <script>
+const modal   = document.getElementById('pet-modal');
+const imgEl   = document.getElementById('modal-img');
+const nameEl  = document.getElementById('modal-name');
+const ageEl   = document.getElementById('modal-age');
+const dietEl  = document.getElementById('modal-diet');
+const descEl  = document.getElementById('modal-desc');
+const priceEl = document.getElementById('modal-price');
+const closeBt = document.querySelector('.modal-close');
+const btnEl = document.getElementById('modalBtn')
+
+
+document.querySelectorAll('.dog-card, .cat-card , .fish-card, .bird-card , .smallpet-card').forEach(card=>{
+  card.addEventListener('click',()=>{
+    imgEl.src        = card.dataset.img;
+    imgEl.alt        = card.dataset.name;
+    nameEl.textContent  = card.dataset.name;
+    ageEl.textContent   = card.dataset.age;
+    dietEl.textContent  = card.dataset.diet;
+    descEl.textContent  = card.dataset.desc;
+    priceEl.textContent = card.dataset.price;
+
+
+const isDogCat = card.classList.contains('dog-card') || card.classList.contains('cat-card');
+const status   = card.dataset.status || 'available';
+
+if (isDogCat){
+  if (status === 'adopted'){
+    btnEl.textContent = 'Join Wait-List';
+    btnEl.classList.add('waitlist');
+  }else{
+    btnEl.textContent = 'Adopt / Contact';
+    btnEl.classList.remove('waitlist');
+  }
+}else{
+  if (status === 'bought'){
+    btnEl.textContent = 'Join Wait-List';
+    btnEl.classList.add('waitlist');
+  }else{
+    btnEl.textContent = 'Contact';
+    btnEl.classList.remove('waitlist');
+  }
+}
+
+
+      modal.classList.remove('hidden'); 
+
+
+  });
+});
+
+
+closeBt.onclick = ()=> modal.classList.add('hidden');
+modal.onclick   = e => { if(e.target===modal) modal.classList.add('hidden'); };
+
+const backBtn = document.getElementById('backTop');
+
+window.addEventListener('scroll', () => {
+  backBtn.classList.toggle('show', window.scrollY > 300);
+});
+
+backBtn.addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+);
+
+
+document.querySelectorAll('.dog-card, .cat-card, .bird-card, .fish-card, .smallpet-card')
+  .forEach(card=>{
+    const status = card.dataset.status || 'available';  
+    const tag = document.createElement('span');
+    tag.className = `badge ${status}`;
+    tag.textContent = status;
+    card.appendChild(tag);
+});
+
+
+const dogCards = document.querySelectorAll('.dog-card');
+const dBtns    = document.querySelectorAll('.filter-btn');
+const availChk = document.getElementById('availChk');
+
+function applyDogFilters(){
+  const ageF = document.querySelector('.filter-btn.active').dataset.filter;
+  const only = availChk.checked;
+
+  dogCards.forEach(c=>{
+    const ageOk   = (ageF==='all') || (c.dataset.agegroup===ageF);
+    const availOk = !only || (c.dataset.status!=='adopted');
+    c.style.display = (ageOk && availOk)? 'block' : 'none';
+  });
+}
+
+dBtns.forEach(b=>{
+  b.addEventListener('click',()=>{
+    dBtns.forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    applyDogFilters();
+  });
+});
+availChk.addEventListener('change',applyDogFilters);
+
+
+
+const catCards = document.querySelectorAll('.cat-card');
+const cBtns    = document.querySelectorAll('.cfilter-btn');
+const catChk   = document.getElementById('catAvailChk');
+
+function applyCatFilters(){
+  const ageF = document.querySelector('.cfilter-btn.cactive').dataset.filter;
+  const only = catChk.checked;
+
+  catCards.forEach(c=>{
+    const ageOk   = (ageF==='all') || (c.dataset.agegroup===ageF);
+    const availOk = !only || (c.dataset.status!=='adopted');
+    c.style.display = (ageOk && availOk)? 'block' : 'none';
+  });
+}
+
+cBtns.forEach(b=>{
+  b.addEventListener('click',()=>{
+    cBtns.forEach(x=>x.classList.remove('cactive'));
+    b.classList.add('cactive');
+    applyCatFilters();
+  });
+});
+catChk.addEventListener('change',applyCatFilters);
+
+
+document.querySelectorAll('.simple-filter').forEach(bar => {
+
+  const btnAll   = bar.querySelector('.sfilter-btn');
+  const chkAvail = bar.querySelector('.availChk');
+
+
+  btnAll.addEventListener('click', () => {
+    btnAll.classList.add('active');
+    chkAvail.checked = false;
+    filterSection(bar.closest('section'));
+  });
+
+
+  chkAvail.addEventListener('change', () => {
+    btnAll.classList.toggle('active', !chkAvail.checked);
+    filterSection(bar.closest('section'));
+  });
+});
+
+function filterSection(section){
+  const showAvail = section.querySelector('.availChk').checked;
+
+  section.querySelectorAll('.fish-card, .bird-card, .smallpet-card')
+    .forEach(card=>{
+      const adopted = card.dataset.status === 'bought';  
+      card.style.display = (showAvail && card.dataset.status === 'bought') ? 'none' : 'block';
+
+    });
+}
+
+</script>
+
+<script>
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+
+    const closeMenu = () => {
+      nav.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    };
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    nav.addEventListener('click', e => {
+      if(e.target.matches('a')) closeMenu();  
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
+    });
+
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeMenu();
+    });
+  })();
+</script>
+
+
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <img src="images/hero.2.png" alt="PetHaven Logo" class="footer-logo" />
+        <h1>PetHaven</h1>
+        <p>Your pet’s best friend for life. Delivering trusted quality, compassionate care, and unconditional love since 2020, making every moment with your furry family member truly special.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: contact@pethaven.com</p>
+        <p>Phone: +44 20 7946 1234</p>
+        <p>Address: 64 Baker Street, London W1U 7GB</p>
+        <p>Mon - Fri: 9am - 5pm</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pets.html">Pets</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com" target="_blank" ><i class="fa fa-facebook"></i> </a>
+        <a href="https://instagram.com" target="_blank" ><i class="fa fa-instagram"></i> </a>
+        <a href="https://twitter.com" target="_blank" ><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PetHaven. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

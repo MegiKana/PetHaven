@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+</head>
+<body>
+ 
+
+  <header class="header">
+    <div class="logo-container">
+      <button class="nav-toggle" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+  <span></span><span></span><span></span>
+</button>
+      <img src="./images/hero.png" alt="PetHaven Logo" class="logo-img" />
+       <p class="logo-text">PetHaven</p>
+      </div>
+      
+      <nav id="primary-nav" class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pets.html">Pets</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+  <main id="main-content">
+
+
+  <section class="contact-hero">
+  <div class="hero-left">
+    <h1>Get in touch꒰✉︎꒱</h1>
+    <p class="lead">Got adoption dreams, products questions, or need a spot on our wait-list?
+     <br>
+      Fill in the form and our team will fetch the info you need within 24 hours(˶ᵔ ᵕ ᵔ˶)
+    </p>
+    <img class="hero-img" src="images/c.png" 
+    alt="Happy pet">
+  </div>
+
+ <form class="contact-form">
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fname">First name </label>
+      <input  type="text" id="fname" name="firstName" minlength="3" maxlength="30">   
+    </div>
+
+    <div class="form-group">
+      <label for="lname">Last name </label>
+      <input  type="text" id="lname" name="lastName" 
+            minlength="3" maxlength="30">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email">E-mail </label>
+      <input  type="email" id="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone (+44 …)</label>
+      <input  type="tel" id="phone" name="phone"placeholder="+44 "> 
+    </div>
+  </div>
+
+ 
+ <div class="form-group full select-wrap">
+  <label for="interest">I’m interested in </label>
+  <select id="interest" name="interest" required>
+    <option value="" disabled selected hidden>Choose an option…</option>
+    <option value="adopt">Adopt / Buy a pet</option>
+    <option value="wait">Join wait-list</option>
+  </select>
+</div>
+
+
+  <div class="form-group full">
+    <label for="product">Product name <em>(optional)</em></label>
+    <input  type="text" id="product" name="product" maxlength="60">
+  </div>
+
+
+  <div class="form-group full">
+    <label for="msg">Message </label>
+    <textarea id="msg" name="message" rows="6" required minlength="20" maxlength="800"
+              placeholder="Tell us a little more…"></textarea>
+  </div>
+
+ 
+  <button class="submit-btn" type="submit">Send message</button>
+</form>
+
+<div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+  Message sent(ˊᵕˋ)♡
+</div>
+
+</form>
+
+</section>
+
+<div class="map-wrap">
+  <iframe
+    title="PetHaven – 64 Baker Street, London"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1981.0804916097322!2d-0.1564679!3d51.520089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad3c70f62e7%3A0x5f8fa48ac90b005b!2s64%20Baker%20St%2C%20London%20W1U%207GB%2C%20UK!5e0!3m2!1sen!2suk!4v1700000000000"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form  = document.querySelector('.contact-form');
+  const toast = document.getElementById('toast');
+
+
+  const fields = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+  fields.forEach(el => {
+    el.setAttribute('autocomplete','off');
+    el.setAttribute('autocapitalize','off');
+    el.setAttribute('autocorrect','off');
+    el.setAttribute('spellcheck','false');
+    el.setAttribute('readonly','');                 
+    el.addEventListener('focus', () => el.removeAttribute('readonly'), {once:true});
+  });
+
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()){ form.reportValidity(); return; }
+
+    form.reset();
+
+  
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2400);
+  });
+});
+
+</script>
+
+
+<script>
+  (function(){
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+
+    const closeMenu = () => {
+      nav.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+    };
+
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    nav.addEventListener('click', e => {
+      if(e.target.matches('a')) closeMenu();  
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) closeMenu();
+    });
+
+    document.addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeMenu();
+    });
+  })();
+</script>
+  
+
+ <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <img src="images/hero.2.png" alt="PetHaven Logo" class="footer-logo" />
+        <h1>PetHaven</h1>
+        <p>Your pet’s best friend for life. Delivering trusted quality, compassionate care, and unconditional love since 2020, making every moment with your furry family member truly special.</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: contact@pethaven.com</p>
+        <p>Phone: +44 20 7946 1234</p>
+        <p>Address: 64 Baker Street, London W1U 7GB</p>
+        <p>Mon - Fri: 9am - 5pm</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="pets.html">Pets</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com" target="_blank" ><i class="fa fa-facebook"></i> </a>
+        <a href="https://instagram.com" target="_blank" ><i class="fa fa-instagram"></i> </a>
+        <a href="https://twitter.com" target="_blank" ><i class="fa fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 PetHaven. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
